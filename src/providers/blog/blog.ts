@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
   and Angular DI.
 */
 
-const url = "https://jsonplaceholder.typicode.com/users";
+const urlUser = "https://jsonplaceholder.typicode.com/users";
 
 @Injectable()
 export class BlogProvider {
@@ -19,10 +19,11 @@ export class BlogProvider {
   }
 
   getUsers(): Observable<any> {
-    return this.http.get(url);
+    return this.http.get(urlUser);
   }
 
   getUser(i): Observable<any> {
-    return this.http.get(`$(url)/$(i)`);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    const url = urlUser+'/'+i;
+    return this.http.get(url);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
   }
 }

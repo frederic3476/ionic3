@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { DetailUserPage } from '../pages/detail-user/detail-user';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,7 +16,8 @@ import { BlogProvider } from '../providers/blog/blog';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    DetailUserPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { BlogProvider } from '../providers/blog/blog';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    DetailUserPage,
   ],
   providers: [
     StatusBar,

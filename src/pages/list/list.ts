@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { BlogProvider } from '../../providers/blog/blog';
+import { DetailUserPage } from '../detail-user/detail-user';
 
 @Component({
   selector: 'page-list',
@@ -38,8 +39,8 @@ export class ListPage {
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(ListPage, {
-      item: item
+    this.navCtrl.push(DetailUserPage, {
+      id: item.id
     });
   }
 }
