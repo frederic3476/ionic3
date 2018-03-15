@@ -27,8 +27,8 @@
                 <ion-segment-button value="adresse">
                   Adresse
                 </ion-segment-button>
-                <ion-segment-button value="localisation">
-                    Localisation
+                <ion-segment-button value="posts">
+                    Liste des posts
                 </ion-segment-button>
               </ion-segment>
             </div>
@@ -49,8 +49,13 @@
                   ...
                 </ion-list>
               
-                <ion-list *ngSwitchCase="'localisation'">
-                  
+                <ion-list *ngSwitchCase="'posts'">
+                    <ion-list>
+                        <ion-item ion-item *ngFor="let post of posts">
+                          <h3>{{ post.title }}</h3>
+                          <p>{{ post.body | slice:0:50 }}...</p>
+                        </ion-item>
+                      </ion-list>
                 </ion-list>
               </div>
         </ion-card-content>

@@ -17,6 +17,7 @@ import { BlogProvider } from '../../providers/blog/blog';
 export class DetailUserPage implements OnInit {
 
   user: any;
+  posts: any[];
   select: string = "info";
 
   constructor(
@@ -29,6 +30,10 @@ export class DetailUserPage implements OnInit {
   ngOnInit() {
     this.blogProvider.getUser(this.navParams.get('id')).subscribe (
       (user) => { this.user = user; console.log(user.name);});
+    
+    //get posts
+    this.blogProvider.getPosts(this.navParams.get('id')).subscribe (
+      (posts) => { this.posts = posts;});  
   }
 
 }
