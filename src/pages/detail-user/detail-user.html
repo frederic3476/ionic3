@@ -13,13 +13,13 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
     <ion-card>
         <ion-card-content>
           <ion-card-title>
               {{ user?.username }}
             </ion-card-title>
-          <div padding>
+          <div>
               <ion-segment [(ngModel)]="select">
                 <ion-segment-button value="info">
                   Infos
@@ -43,10 +43,7 @@
                   </ion-list>
 
                 <ion-list *ngSwitchCase="'adresse'">
-                  <ion-item>
-                    <h2>Ruby</h2>
-                  </ion-item>
-                  ...
+                  <div id="map_canvas"></div>
                 </ion-list>
               
                 <ion-list *ngSwitchCase="'posts'">

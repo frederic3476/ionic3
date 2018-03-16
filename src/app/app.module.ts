@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpClientModule } from '@angular/common/http'; 
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -36,7 +37,8 @@ import { BlogProvider } from '../providers/blog/blog';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BlogProvider
+    BlogProvider,
+    GoogleMaps
   ]
 })
 export class AppModule {}
