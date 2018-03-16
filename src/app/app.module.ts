@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BlogProvider } from '../providers/blog/blog';
 
+
 @NgModule({
   declarations: [
     MyApp,
